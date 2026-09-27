@@ -202,7 +202,7 @@ class PrinterProbe:
         print_time = toolhead.get_last_move_time()
         res = self.mcu_probe.query_endstop(print_time)
         self.last_state = res
-        gcmd.respond_info("probe: %s" % (["open", "TRIGGERED"][not not res],))
+        gcmd.respond_info("probe: %s" % (["down", "up"][not not res],))
     def get_status(self, eventtime):
         return {'name': self.name,
                 'last_query': self.last_state,

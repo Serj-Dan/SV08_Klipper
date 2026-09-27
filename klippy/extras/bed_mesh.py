@@ -432,8 +432,8 @@ class BedMeshCalibrate:
         for i, (x, y) in enumerate(self.points):
             adj_pt = "(%.1f, %.1f)" % (x - x_offset, y - y_offset)
             mesh_pt = "(%.1f, %.1f)" % (x, y)
-            print_func(
-                "  %-4d| %-16s| %s" % (i, adj_pt, mesh_pt))
+            #print_func(
+            #    "  %-4d| %-16s| %s" % (i, adj_pt, mesh_pt))
         if self.zero_ref_pos is not None:
             print_func(
                 "bed_mesh: zero_reference_position is (%.2f, %.2f)"
